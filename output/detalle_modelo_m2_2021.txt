@@ -1,0 +1,32 @@
+
+Call:
+svyglm(formula = P21_clean ~ condicion_formalidad * nivel_educativo + 
+    sexo + edad + edad2, design = sub_design)
+
+Survey design:
+subset(dis_eph, anio_analisis == a)
+
+Coefficients:
+                                                                    Estimate Std. Error t value             Pr(>|t|)    
+(Intercept)                                                       -17478.640   6026.570  -2.900             0.003735 ** 
+condicion_formalidadInformal                                      -12175.346   3573.527  -3.407             0.000659 ***
+nivel_educativoPrimario Completo                                    3517.093   3216.121   1.094             0.274159    
+nivel_educativoSecundario Incompleto                               12062.322   3308.815   3.646             0.000268 ***
+nivel_educativoSecundario Completo                                 17698.788   2858.919   6.191  0.00000000061761187 ***
+nivel_educativoSuperior Incompleto                                 25978.683   3263.631   7.960  0.00000000000000187 ***
+nivel_educativoSuperior Completo                                   38670.664   3001.710  12.883 < 0.0000000000000002 ***
+sexoVarón                                                          18633.920   1150.866  16.191 < 0.0000000000000002 ***
+edad                                                                1748.301    262.917   6.650  0.00000000003060514 ***
+edad2                                                                -16.099      3.113  -5.172  0.00000023540736641 ***
+condicion_formalidadInformal:nivel_educativoPrimario Completo      -3269.302   4424.375  -0.739             0.459963    
+condicion_formalidadInformal:nivel_educativoSecundario Incompleto  -9249.581   4227.768  -2.188             0.028701 *  
+condicion_formalidadInformal:nivel_educativoSecundario Completo   -10069.249   4030.770  -2.498             0.012499 *  
+condicion_formalidadInformal:nivel_educativoSuperior Incompleto   -14120.822   4200.354  -3.362             0.000777 ***
+condicion_formalidadInformal:nivel_educativoSuperior Completo      -8148.253   5443.747  -1.497             0.134468    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 759646182)
+
+Number of Fisher Scoring iterations: 2
+
